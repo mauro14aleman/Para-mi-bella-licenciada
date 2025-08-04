@@ -24,7 +24,8 @@
       color: white;
       text-align: center;
       padding: 2rem;
-      animation: fadeIn 1s ease forwards;
+      animation: fadeIn 1.5s ease forwards;
+      backdrop-filter: brightness(0.8) blur(2px);
     }
     .screen.active {
       display: flex;
@@ -33,50 +34,63 @@
       align-items: center;
     }
     .screen h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      text-shadow: 0 0 10px #000;
+      text-shadow: 0 0 20px #ff8cfa;
     }
     .screen p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       max-width: 80%;
-      text-shadow: 0 0 10px #000;
+      text-shadow: 0 0 15px #000;
+      animation: slideUp 2s ease;
+    }
+    .gif {
+      width: 180px;
+      margin-top: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      animation: pulse 3s infinite;
     }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    .gif {
-      width: 150px;
-      margin-top: 1.5rem;
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="screen active" style="background-image: url('https://i.gifer.com/7VE.gif');">
-    <h1>🌟 Pantalla 1</h1>
+  <div class="screen active" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1950&q=80');">
+    <h1>🌟 Sos lindisima</h1>
     <p>Desde que llegaste, las estrellas no dejaron de brillar en mis noches.</p>
-    <img class="gif" src="https://media.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif" alt="lluvia de estrellas"/>
+    <img class="gif" src="https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif" alt="lluvia de estrellas"/>
   </div>
-  <div class="screen" style="background-image: url('https://i.gifer.com/1amz.gif');">
-    <h1>💖 Pantalla 2</h1>
+  <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1520523839899-2d3d4b4245c3?auto=format&fit=crop&w=1950&q=80');">
+    <h1>💖 Sos inteligente</h1>
     <p>Tu sonrisa es la melodía que da ritmo a mi corazón.</p>
-    <img class="gif" src="https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif" alt="corazones"/>
+    <img class="gif" src="https://media.giphy.com/media/3oz8xKaR836UJOYeOc/giphy.gif" alt="corazones flotando"/>
   </div>
-  <div class="screen" style="background-image: url('https://i.gifer.com/4V0b.gif');">
-    <h1>🌌 Pantalla 3</h1>
+  <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1520975924576-7ca7c2f0eb7c?auto=format&fit=crop&w=1950&q=80');">
+    <h1>🌌 Sos dedicada</h1>
     <p>Contigo, cada día es un universo lleno de magia y amor.</p>
-    <img class="gif" src="https://media.giphy.com/media/3oz8xKaR836UJOYeOc/giphy.gif" alt="universo"/>
+    <img class="gif" src="https://media.giphy.com/media/xTiTnHXbRoaZ1B1Mo8/giphy.gif" alt="universo animado"/>
   </div>
-  <div class="screen" style="background-image: url('https://i.gifer.com/7Ud7.gif');">
-    <h1>🎆 Pantalla 4</h1>
+  <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?auto=format&fit=crop&w=1950&q=80');">
+    <h1>🎆 Sos encantadora</h1>
     <p>No necesito deseos si te tengo a ti, mi estrella favorita.</p>
-    <img class="gif" src="https://media.giphy.com/media/xT8qB7gkV2b8ZcCAZq/giphy.gif" alt="estrellas fugaces"/>
+    <img class="gif" src="https://media.giphy.com/media/l41YgAfg5hE0wC1WM/giphy.gif" alt="destellos mágicos"/>
   </div>
-  <div class="screen" style="background-image: url('https://i.gifer.com/Q6a.gif');">
-    <h1>🌠 Pantalla 5</h1>
+  <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80');">
+    <h1>🌠 Sos lo bonito en mis días, que con palabras no puedo ecxplicar</h1>
     <p>Gracias por ser parte de mi cielo. Te elijo cada día.</p>
-    <img class="gif" src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="estrella final"/>
+    <img class="gif" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="estrella brillante"/>
   </div>
 
   <audio autoplay loop>
