@@ -129,4 +129,33 @@
     });
   </script>
 </body>
+  <audio id="bg-music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const screens = document.querySelectorAll('.screen');
+  let current = 0;
+  let started = false;
+
+  // Al hacer clic, iniciamos música y cambiamos pantalla
+  document.body.addEventListener('click', () => {
+    if (!started) {
+      music.volume = 0.8; // volumen (0.0 a 1.0)
+      music.play().then(() => {
+        console.log('🎵 Música iniciada');
+      }).catch((e) => {
+        console.warn('⚠️ Error al reproducir música:', e);
+      });
+      started = true;
+    }
+
+    screens[current].classList.remove('active');
+    current = (current + 1) % screens.length;
+    screens[current].classList.add('active');
+  });
+</script>
+
 </html>
