@@ -93,31 +93,6 @@
     <img class="gif" src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dThoOXRuOXNwdmwwcWVkYTZhendyb3hla203cm91d3V1MmNrZnJiMyZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/gDfteqLchLcRTtjAD7/giphy.gif"/>
   </div>
 
- <audio id="bg-music" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio.
-</audio>
-
-<script>
-  const music = document.getElementById("bg-music");
-  const screens = document.querySelectorAll('.screen');
-  let current = 0;
-  let started = false;
-
-  document.body.addEventListener('click', () => {
-    // reproducir música solo la primera vez
-    if (!started) {
-      music.play().catch(e => console.log("Autoplay bloqueado:", e));
-      started = true;
-    }
-
-    // cambiar de pantalla
-    screens[current].classList.remove('active');
-    current = (current + 1) % screens.length;
-    screens[current].classList.add('active');
-  });
-</script>
-
 
   <script>
     const screens = document.querySelectorAll('.screen');
@@ -129,33 +104,6 @@
     });
   </script>
 </body>
-  <audio id="bg-music" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio.
-</audio>
 
-<script>
-  const music = document.getElementById("bg-music");
-  const screens = document.querySelectorAll('.screen');
-  let current = 0;
-  let started = false;
-
-  // Al hacer clic, iniciamos música y cambiamos pantalla
-  document.body.addEventListener('click', () => {
-    if (!started) {
-      music.volume = 0.8; // volumen (0.0 a 1.0)
-      music.play().then(() => {
-        console.log('🎵 Música iniciada');
-      }).catch((e) => {
-        console.warn('⚠️ Error al reproducir música:', e);
-      });
-      started = true;
-    }
-
-    screens[current].classList.remove('active');
-    current = (current + 1) % screens.length;
-    screens[current].classList.add('active');
-  });
-</script>
 
 </html>
