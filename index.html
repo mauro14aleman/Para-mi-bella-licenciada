@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ti 💫</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+    .screen {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1s ease forwards;
+    }
+    .screen.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .screen h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #000;
+    }
+    .screen p {
+      font-size: 1.2rem;
+      max-width: 80%;
+      text-shadow: 0 0 10px #000;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .gif {
+      width: 150px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="screen active" style="background-image: url('https://i.gifer.com/7VE.gif');">
+    <h1>🌟 Pantalla 1</h1>
+    <p>Desde que llegaste, las estrellas no dejaron de brillar en mis noches.</p>
+    <img class="gif" src="https://media.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif" alt="lluvia de estrellas"/>
+  </div>
+  <div class="screen" style="background-image: url('https://i.gifer.com/1amz.gif');">
+    <h1>💖 Pantalla 2</h1>
+    <p>Tu sonrisa es la melodía que da ritmo a mi corazón.</p>
+    <img class="gif" src="https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif" alt="corazones"/>
+  </div>
+  <div class="screen" style="background-image: url('https://i.gifer.com/4V0b.gif');">
+    <h1>🌌 Pantalla 3</h1>
+    <p>Contigo, cada día es un universo lleno de magia y amor.</p>
+    <img class="gif" src="https://media.giphy.com/media/3oz8xKaR836UJOYeOc/giphy.gif" alt="universo"/>
+  </div>
+  <div class="screen" style="background-image: url('https://i.gifer.com/7Ud7.gif');">
+    <h1>🎆 Pantalla 4</h1>
+    <p>No necesito deseos si te tengo a ti, mi estrella favorita.</p>
+    <img class="gif" src="https://media.giphy.com/media/xT8qB7gkV2b8ZcCAZq/giphy.gif" alt="estrellas fugaces"/>
+  </div>
+  <div class="screen" style="background-image: url('https://i.gifer.com/Q6a.gif');">
+    <h1>🌠 Pantalla 5</h1>
+    <p>Gracias por ser parte de mi cielo. Te elijo cada día.</p>
+    <img class="gif" src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="estrella final"/>
+  </div>
+
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script>
+    const screens = document.querySelectorAll('.screen');
+    let current = 0;
+    document.body.addEventListener('click', () => {
+      screens[current].classList.remove('active');
+      current = (current + 1) % screens.length;
+      screens[current].classList.add('active');
+    });
+  </script>
+</body>
+</html>
